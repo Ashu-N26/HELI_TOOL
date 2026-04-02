@@ -1,0 +1,22 @@
+name: Run HELI_TOOL Python Script
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # This adds a "Run" button so you can start it manually
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run my script
+        run: python main.py
