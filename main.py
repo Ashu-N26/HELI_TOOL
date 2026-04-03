@@ -193,3 +193,16 @@ if __name__ == "__main__":
                 print(f"\n  Runway: {rwy['runway_id']} | {rwy['proc_name']} | DH={rwy['dh']}ft")
                 print(f"  Full={rwy['rvr_full']}m | Inter={rwy['rvr_inter']}m | Basic={rwy['rvr_basic']}m | None={rwy['rvr_none']}m")
         print(f"  Message:   {r['message']}")
+
+if __name__ == "__main__":
+    import json
+
+    with open("input.json") as f:
+        data = json.load(f)
+
+    result = run_heli_minima(data)
+
+    with open("output.json", "w") as f:
+        json.dump(result, f, indent=2)
+
+    print("Done")
