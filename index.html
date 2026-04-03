@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
-<body>
-  <h1>HELI TOOL</h1>
-  <p>Tool is ready. Use GitHub Actions to run calculations.</p>
-</body>
-</html>
+<script>
+fetch("output.json")
+  .then(res => res.json())
+  .then(data => {
+    document.body.innerHTML += "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+  });
+</script>
