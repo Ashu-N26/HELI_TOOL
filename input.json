@@ -1,0 +1,11 @@
+{
+  "icao": "VABB",
+  "airport_name": "Mumbai",
+  "date": "2026-03-31",
+  "heli_flag": "YES",
+  "raf_flag": "N",
+  "glidepath_angle": null,
+  "procedures": [],
+  "circling_sheet1": [],
+  "circling_sheet2": []
+}
