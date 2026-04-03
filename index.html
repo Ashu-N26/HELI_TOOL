@@ -1,7 +1,15 @@
+<h2>Output:</h2>
+<pre id="result"></pre>
+
 <script>
 fetch("output.json")
   .then(res => res.json())
   .then(data => {
-    document.body.innerHTML += "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+    document.getElementById("result").innerText =
+      JSON.stringify(data, null, 2);
+  })
+  .catch(() => {
+    document.getElementById("result").innerText =
+      "No output yet. Run the tool.";
   });
 </script>
